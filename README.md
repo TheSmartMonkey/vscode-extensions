@@ -4,22 +4,22 @@ Scripts to install my extensions for Visual Studio Code Windows/Linux
 
 ## For Windows powershell script
 
-Launch `Windows PowerShell` with admin rights
+1) Launch `Windows PowerShell` with admin rights
 
-Go to your your local repo : `cd your_path`
+2) Go to the project folder : `cd vscode-extensions\scripts`
 
-Launch the script : `.\vscodeExtensionsWindows.ps1`
+3) Launch the script : `.\vscodeExtensionsWindows.ps1`
 
-If you have a powershell script execution error try this : `Set-ExecutionPolicy Unrestricted`
+4) If you have a powershell script execution error try this : `Set-ExecutionPolicy Unrestricted`
 
-Then restart Visual Studio Code
+5) Restart `Visual Studio Code`
 
 ## For Linux bash script
 
-Launch your `Terminal`
+1) Launch your `Terminal`
 
-Go to your your local repo : `cd your_path`
+2) Go to the project folder : `cd vscode-extensions/scripts`
 
-Launch the script : `sh vscodeExtensionsWindows.sh`
+3) Launch the script : `sh vscodeExtensionsWindows.sh`
 
-Then restart Visual Studio Code
+4) Restart `Visual Studio Code`
