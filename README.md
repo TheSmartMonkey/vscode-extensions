@@ -1,25 +1,25 @@
 # vscode-extensions
 
-Scripts to install my extensions for Visual Studio Code Windows/Linux
+Scripts to install my extensions for Visual Studio Code
 
-## For Windows powershell script
+## Go to the project
 
-1) Launch `Windows PowerShell` with admin rights
+1) Launch your **Linux terminal** or **Windows command line** programme
 
-2) Go to the project folder : `cd vscode-extensions\scripts`
+2) Go to the project folder : `cd "project_folder_path"`
 
-3) Launch the script : `.\vscodeExtensionsWindows.ps1`
+3) Then in the script folder : `cd scripts`
 
-4) If you have a powershell script execution error try this : `Set-ExecutionPolicy Unrestricted`
+## Copy extensions script
 
-5) Restart `Visual Studio Code`
+1) Launch the script : `python vscodeCopyExtensions.py`
 
-## For Linux bash script
+2) It will over right `vscodeExtensions.txt` file with the extensions install on your **Visual Studio Code**
 
-1) Launch your `Terminal`
+## Install extensions script
 
-2) Go to the project folder : `cd vscode-extensions/scripts`
+1) Go to your **Visual Studio Code** where you wish to install your extensions
 
-3) Launch the script : `sh vscodeExtensionsWindows.sh`
+2) Launch the script : `python vscodeExtensions.py`
 
-4) Restart `Visual Studio Code`
+3) When it's completed restart **Visual Studio Code**
