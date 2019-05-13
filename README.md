@@ -2,7 +2,7 @@
 
 Scripts to install my extensions for Visual Studio Code
 
-## Go to the project
+## Getting started
 
 1) Launch your **Linux terminal** or **Windows command line** programme
 
