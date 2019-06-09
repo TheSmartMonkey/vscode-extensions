@@ -4,7 +4,7 @@ Scripts to install my extensions for Visual Studio Code
 
 ## Getting started
 
-1) Launch your **Linux terminal** or **Windows command line** programme
+1) Launch your **Linux terminal** or **Windows command line** program
 
 2) Go to the project folder : `cd "project_folder_path"`
 
@@ -14,7 +14,7 @@ Scripts to install my extensions for Visual Studio Code
 
 1) Launch the script : `python vscodeCopyExtensions.py`
 
-2) It will over right `vscodeExtensions.txt` file with the extensions install on your **Visual Studio Code**
+2) It will overwrite `vscodeExtensions.txt` file with the extensions install on your **Visual Studio Code**
 
 ## Install extensions script
 
