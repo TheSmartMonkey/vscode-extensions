@@ -71,9 +71,10 @@ else:
     print("Between 1 and 3")
     choose = input("Choose one :\n"+
                 "(1) Install only extra extensions\n" +
-                "(2) Reinstall all your extensions\n" +
-                "(3) To go back from operation 2 (keep only your previous extensions)\n" +
-                "(4) Exit\n" +
+                "(2) Overright extensions in the list with yours\n" +
+                "(3) Reinstall all your extensions\n" +
+                "(4) To go back from operation 2 (keep only your previous extensions)\n" +
+                "(5) Exit\n" +
                 ": ")
 
 
