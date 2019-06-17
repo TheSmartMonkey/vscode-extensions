@@ -47,22 +47,25 @@ def install_all_extensions(command,file_compared,file_master):
 
 choose = input("Choose one :\n"+
                 "(1) Install only extra extensions\n" +
-                "(2) Reinstall all your extensions\n" +
-                "(3) To go back from operation 2 (keep only your previous extensions)\n" +
-                "(4) Exit\n" +
+                "(2) Overright extensions in the list with yours\n" +
+                "(3) Reinstall all your extensions\n" +
+                "(4) To go back from operation 2 (keep only your previous extensions)\n" +
+                "(5) Exit\n" +
                 ": ")
 
 if choose == '1':
     create_my_extensions_file()
     install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
 elif choose == '2':
+    os.system("code --list-extensions > " + extensions_file)
+elif choose == '3':
     create_my_extensions_file()
     install_all_extensions("code --uninstall-extension", "myPrevousExtentions.txt", extensions_file)
     install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
-elif choose == '3':
+elif choose == '4':
     install_all_extensions("code --uninstall-extension", extensions_file, "myPrevousExtentions.txt")
     install_all_extensions("code --install-extension", "myPrevousExtentions.txt", extensions_file)
-elif choose == '4':
+elif choose == '5':
     sys.exit()
 else:
     print("Between 1 and 3")
