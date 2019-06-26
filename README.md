@@ -34,9 +34,17 @@ Overright extensions in the list with yours : `python vscodeExtensions.py --copy
 Reinstall all your extensions : `python vscodeExtensions.py --re-install`
 
 To go back from operation install or reinstall (keep only your previous extensions) : 
-`python vscodeExtensions.py --revert-operation`
 
+`python vscodeExtensions.py --revert-operation`
 
 ### Finally
 
 When it's completed restart **Visual Studio Code**
+
+## Use Case
+
+1) I need to deploy a vscode environnement on multiple computers
+
+2) When I change companies I want to have my preconfigured environnement and be operationnal faster
+
+3) I want the same environnement on all my computers
