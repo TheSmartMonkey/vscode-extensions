@@ -1,18 +1,17 @@
 #!/usr/bin/env python
 
 import os
-import sys
 
 
 extensions_file = "vscodeExtensionsList.txt"
 
 
-def create_my_extensions_file():
+def create_extensions_file(my_extension_file):
     """
     Create a file with current installed extensions
     """
 
-    os.system("code --list-extensions > " + "myPrevousExtentions.txt") 
+    os.system("code --list-extensions > " + my_extension_file) 
 
 
 def compare(file_compared,file_master):
@@ -45,37 +44,62 @@ def install_all_extensions(command,file_compared,file_master):
         os.system(command + " " + line)
 
 
-choose = input("Choose one :\n"+
-                "(1) Install only extra extensions\n" +
-                "(2) Overright extensions in the list with yours\n" +
-                "(3) Reinstall all your extensions\n" +
-                "(4) To go back from operation 2 (keep only your previous extensions)\n" +
-                "(5) Exit\n" +
-                ": ")
+if __name__ == '__main__':
+    from argparse import ArgumentParser
 
-if choose == '1':
-    create_my_extensions_file()
-    install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
-elif choose == '2':
-    os.system("code --list-extensions > " + extensions_file)
-elif choose == '3':
-    create_my_extensions_file()
-    install_all_extensions("code --uninstall-extension", "myPrevousExtentions.txt", extensions_file)
-    install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
-elif choose == '4':
-    install_all_extensions("code --uninstall-extension", extensions_file, "myPrevousExtentions.txt")
-    install_all_extensions("code --install-extension", "myPrevousExtentions.txt", extensions_file)
-elif choose == '5':
-    sys.exit()
-else:
-    print("Between 1 and 3")
-    choose = input("Choose one :\n"+
-                "(1) Install only extra extensions\n" +
-                "(2) Overright extensions in the list with yours\n" +
-                "(3) Reinstall all your extensions\n" +
-                "(4) To go back from operation 2 (keep only your previous extensions)\n" +
-                "(5) Exit\n" +
-                ": ")
+    parser = ArgumentParser()
+    parser.add_argument('-i', '--install', default = 'install', help = 'Install only extra extensions', action = 'store_true', dest = "install")
+    parser.add_argument('-c', '--copy', default = 'copy', help = 'Overright extensions in the list with yours', action = 'store_true', dest = "copy")
+    parser.add_argument('-ri', '--re-install', default = 'reinstall', help = 'Reinstall all your extensions', action = 'store_true', dest = "reinstall")
+    parser.add_argument('-ro', '--revert-operation', default = 'revert', help = 'To go back from operation install or reinstall (keep only your previous extensions)', action = 'store_true', dest = "revert")
+    arguments = parser.parse_args()
 
+    # Install only extra extensions
+    if arguments.install is True:
+        create_extensions_file("myPrevousExtentions.txt")
+        install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
+        print("\nInstallation COMPLETED")
 
-print("Installation Completed")
+    # Overright extensions in the list with yours
+    if arguments.copy is True:
+        file_previous_extensions = []
+        file_final_extensions = []
+
+        with open(extensions_file,'r') as fp:
+            for line in fp:
+                file_previous_extensions.append(line.strip())
+
+        create_extensions_file(extensions_file)
+
+        with open(extensions_file,'r') as ff:
+            for line in ff:
+                file_final_extensions.append(line.strip())
+
+        # Print extensions that have been added to the vscodeExtensionsList.txt file
+        added_extensions = list(set(file_final_extensions) - set(file_previous_extensions))
+        removed_extensions = list(set(file_previous_extensions) - set(file_final_extensions))
+
+        if len(added_extensions) > 0:
+            print("\nAdded Extensions in file:")
+            for extensions in added_extensions:
+                print(extensions)
+
+        if len(removed_extensions) > 0:
+            print("\nRemoved Extensions in file:")
+            for extensions in removed_extensions:
+                print(extensions)
+
+        print("\nCopy extensions in file COMPLETED")
+
+    # Reinstall all your extensions
+    if arguments.reinstall is True:
+        create_extensions_file("myPrevousExtentions.txt")
+        install_all_extensions("code --uninstall-extension", "myPrevousExtentions.txt", extensions_file)
+        install_all_extensions("code --install-extension", extensions_file, "myPrevousExtentions.txt")
+        print("\nReinstallation COMPLETED")
+
+    # To go back from operation install or reinstall (keep only your previous extensions)
+    if arguments.revert is True:
+        install_all_extensions("code --uninstall-extension", extensions_file, "myPrevousExtentions.txt")
+        install_all_extensions("code --install-extension", "myPrevousExtentions.txt", extensions_file)
+        print("\nRevert opération COMPLETED")

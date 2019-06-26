@@ -6,14 +6,37 @@ Scripts to install my extensions for Visual Studio Code
 
 1) Launch your **Linux terminal** or **Windows command line** program
 
-2) Go to the project folder : `cd "project_folder_path/vscode-extensions"`
+2) Install argparse python module : `pip install argparse`
+
+3) Go to the project folder : `cd "project_folder_path/vscode-extensions"`
 
 ## Install extensions script
 
-1) Go to your **Visual Studio Code** where you wish to install your extensions
+### Commands
 
-2) Launch the script : `python vscodeExtensions.py`
+Get help : `python vscodeExtensions.py -h`
 
-3) Select your option in the menu
+```bash
+optional arguments:
+  -h, --help            show this help message and exit
+  -i, --install         Install only extra extensions
+  -c, --copy            Overright extensions in the list with yours
+  -ri, --re-install     Reinstall all your extensions
+  -ro, --revert-operation
+                        To go back from operation install or reinstall (keep
+                        only your previous extensions)
+```
 
-4) When it's completed restart **Visual Studio Code**
+Install only extra extensions : `python vscodeExtensions.py --install`
+
+Overright extensions in the list with yours : `python vscodeExtensions.py --copy`
+
+Reinstall all your extensions : `python vscodeExtensions.py --re-install`
+
+To go back from operation install or reinstall (keep only your previous extensions) : 
+`python vscodeExtensions.py --revert-operation`
+
+
+### Finally
+
+When it's completed restart **Visual Studio Code**

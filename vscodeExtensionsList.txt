@@ -15,13 +15,13 @@ huizhou.githd
 JoeBerria.statusbarerror
 mde.select-highlight-minimap
 mechatroner.rainbow-csv
+ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-mssql.mssql
 ms-python.python
 ms-vsliveshare.vsliveshare
 msjsdiag.vscode-react-native
 oderwat.indent-rainbow
-PeterJausovec.vscode-docker
 quicktype.quicktype
 redhat.vscode-yaml
 vincaslt.highlight-matching-tag
