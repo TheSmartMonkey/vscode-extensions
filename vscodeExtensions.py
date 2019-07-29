@@ -102,4 +102,4 @@ if __name__ == '__main__':
     if arguments.revert is True:
         install_all_extensions("code --uninstall-extension", extensions_file, "myPrevousExtentions.txt")
         install_all_extensions("code --install-extension", "myPrevousExtentions.txt", extensions_file)
-        print("\nRevert opération COMPLETED")
+        print("\nRevert operation COMPLETED")
