@@ -12,7 +12,7 @@ Scripts to install my extensions for Visual Studio Code
 
 ### Commands
 
-Get help : `python vscodeExtensions.py -h`
+Get help : `python vscode.py -h`
 
 ```bash
 usage: vscode.py [-h] [-i] [-c] [-ri] [-ui] [-o] [-k KEYBINDINGS_FOLDER_PATH]
@@ -35,25 +35,25 @@ optional arguments:
                         Set your settings to the settings.json in vscodeFiles
 ```
 
-Install only extra extensions : `python vscodeExtensions.py --install`
+Install only extra extensions : `python vscode.py --install`
 
-Overright extensions in the list with yours : `python vscodeExtensions.py --copy`
+Overright extensions in the list with yours : `python vscode.py --copy`
 
-Reinstall all your extensions : `python vscodeExtensions.py --re-install`
+Reinstall all your extensions : `python vscode.py --re-install`
 
-Uninstall all your extensions : `python vscodeExtensions.py --un-install-all`
+Uninstall all your extensions : `python vscode.py --un-install-all`
 
 To go back from operation install or reinstall (keep only your previous extensions) :
 
-`python vscodeExtensions.py --revert-operation`
+`python vscode.py --revert-operation`
 
 Set your shortcuts to the keybindings.json in vscodeFiles :
 
-`python vscodeExtensions.py --set-keys "KEYBINDINGS_FOLDER_PATH"`
+`python vscode.py --set-keys "KEYBINDINGS_FOLDER_PATH"`
 
 Set your shortcuts to the settings.json in vscodeFiles :
 
-`python vscodeExtensions.py --set-keys "SETTINGS_FOLDER_PATH"`
+`python vscode.py --set-keys "SETTINGS_FOLDER_PATH"`
 
 default vscode user folder path are :
 Windows : %APPDATA%\\Code\\User\\
