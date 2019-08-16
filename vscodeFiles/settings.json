@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "files.autoSave": "afterDelay",
+    "liveshare.featureSet": "insiders",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx" 
+    },
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-great-icons",
+    "javascript.updateImportsOnFileMove.enabled": "always"
+}
