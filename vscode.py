@@ -51,11 +51,10 @@ if __name__ == '__main__':
 
     parser = ArgumentParser()
     parser.add_argument('-i', '--install', default = 'install', help = 'Install only extra extensions', action = 'store_true', dest = "install")
-    parser.add_argument('-c', '--copy', default = 'copy', help = 'Overright extensions in the list with yours', action = 'store_true', dest = "copy")
+    parser.add_argument('-c', '--copy', default = 'copy', help = 'Overright extensions in the extensionList.txt with yours', action = 'store_true', dest = "copy")
     parser.add_argument('-ri', '--re-install', default = 'reinstall', help = 'Reinstall all your extensions', action = 'store_true', dest = "reinstall")
     parser.add_argument('-ui', '--un-install-all', default = 'uninstall', help = 'Uninstall all your extensions', action = 'store_true', dest = "uninstall")
-    parser.add_argument('-o', '--revert-operation', default = 'revert', help = 'To go back from operation install or reinstall (keep only your previous extensions)', action = 'store_true', dest = "revert")
-    parser.add_argument('-k', '--set-keys', default = 'keybindings_folder_path', help = "Set your shortcuts to the keybindings.json in vscodeFiles", dest = "keybindings_folder_path")
+    parser.add_argument('-k', '--set-keys', default = 'keybindings_folder_path', help = "Set your keys shortcuts to the keybindings.json in vscodeFiles", dest = "keybindings_folder_path")
     parser.add_argument('-s', '--set-settings', default = 'settings_folder_path', help = "Set your settings to the settings.json in vscodeFiles", dest = "settings_folder_path")
     arguments = parser.parse_args()
 
@@ -106,20 +105,15 @@ if __name__ == '__main__':
     # Uninstall all your extensions
     if arguments.uninstall is True:
         create_extensions_file("myPrevousExtentions.txt")
-        for line in "myPrevousExtentions.txt":
-            os.system("code --uninstall-extension" + " " + line)
+        with open("myPrevousExtentions.txt",'r') as f:
+            for line in f:
+                os.system("code --uninstall-extension" + " " + line)
         print("\nReinstallation COMPLETED")
-
-    # To go back from operation install or reinstall (keep only your previous extensions)
-    if arguments.revert is True:
-        install_all_extensions("code --uninstall-extension", extensions_file, "myPrevousExtentions.txt")
-        install_all_extensions("code --install-extension", "myPrevousExtentions.txt", extensions_file)
-        print("\nRevert operation COMPLETED")
 
     # Setup your keybindings by copying the vscodeFiles/keybindings.json file
     if arguments.keybindings_folder_path != "keybindings_folder_path":
         try:
-            keybindings_file = "keygindings.json"
+            keybindings_file = "keybindings.json"
             copyfile("vscodeFiles/" + keybindings_file, arguments.keybindings_folder_path + keybindings_file)
             print("\nKeybindings setup COMPLETED")
         except:
@@ -133,7 +127,7 @@ Mac : $HOME/Library/Application Support/Code/User""")
     # Setup your settings by copying the vscodeFiles/settings.json file
     if arguments.settings_folder_path != "settings_folder_path":
         try:
-            settings_file = "keygindings.json"
+            settings_file = "settings.json"
             copyfile("vscodeFiles/" + settings_file, arguments.settings_folder_path + settings_file)
             print("\nSettings setup COMPLETED")
         except:
