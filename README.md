@@ -46,11 +46,11 @@ optional arguments:
 
 Default vscode user folder path are :
 
-**Windows** : %APPDATA%\\Code\\User\\
+**Windows** : `%APPDATA%\\Code\\User\\`
 
-**Linux** : $HOME/.config/Code/User/
+**Linux** : `$HOME/.config/Code/User/`
 
-**Mac** : $HOME/Library/Application Support/Code/User/
+**Mac** : `$HOME/Library/Application Support/Code/User/`
 
 ### Finally
 
