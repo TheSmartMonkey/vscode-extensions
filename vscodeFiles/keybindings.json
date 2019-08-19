@@ -1,7 +1,7 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+z",
+        "key": "ctrl+w",
         "command": "undo",
         "when": "textInputFocus && !editorReadonly"
     },
