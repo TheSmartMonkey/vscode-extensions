@@ -37,7 +37,7 @@
         "when": "inFilesPicker && inQuickOpen"
     },
     {
-        "key": "ctrl+a",
+        "key": "ctrl+q",
         "command": "editor.action.selectAll",
         "when": "textInputFocus"
     }
