@@ -7,13 +7,12 @@ import os
 os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal && make clean && make deploy")
 
 # Setup my Visual Studio Code
-os.system("cd ~/vscode-extensions")
 os.system("python vscode.py -k /home/developer/.config/Code/User/")
 os.system("python vscode.py -s /home/developer/.config/Code/User/")
 print("\n")
 os.system("python vscode.py --install")
 
 # Go back to main project
-os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal/ui")
+os.system("code ~/WKS/src/gitlab.com/moonshotlabs/mylegal/ui")
 
 print("\nSetup vscode COMPLETED")
