@@ -4,7 +4,7 @@
 import os
 
 # Deploys the project using the serverless framework to AWS lambda
-os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal && make clean && make deploy")
+os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal && make clean && make deploydev")
 
 # Setup my Visual Studio Code
 os.system("python vscode.py -k /home/developer/.config/Code/User/")
@@ -13,6 +13,6 @@ print("\n")
 os.system("python vscode.py --install")
 
 # Go back to main project
-os.system("code ~/WKS/src/gitlab.com/moonshotlabs/mylegal/ui")
+os.system("code ~/WKS/src/gitlab.com/moonshotlabs/mylegal")
 
-print("\nSetup vscode COMPLETED")
+print("\nEnvironnement setup COMPLETED")
