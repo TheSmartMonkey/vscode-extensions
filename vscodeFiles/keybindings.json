@@ -6,7 +6,7 @@
         "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+oem_2",
+        "key": "ctrl+.",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
