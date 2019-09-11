@@ -6,7 +6,17 @@
         "when": "textInputFocus && !editorReadonly"
     },
     {
+        "key": "ctrl+z",
+        "command": "undo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+.",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+/",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -16,6 +26,14 @@
     },
     {
         "key": "ctrl+shift+oem_3",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+ù",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+ù",
         "command": "workbench.action.terminal.new"
     },
     {
@@ -38,6 +56,11 @@
     },
     {
         "key": "ctrl+q",
+        "command": "editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+a",
         "command": "editor.action.selectAll",
         "when": "textInputFocus"
     }
