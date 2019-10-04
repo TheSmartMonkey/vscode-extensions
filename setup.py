@@ -4,7 +4,7 @@
 import os
 
 # Deploys the project using the serverless framework to AWS lambda
-os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal && make clean && make deploydev")
+# os.system("cd ~/WKS/src/gitlab.com/moonshotlabs/mylegal && make clean && make deploydev")
 
 # Setup my Visual Studio Code
 os.system("python vscode.py -k /home/developer/.config/Code/User/")
