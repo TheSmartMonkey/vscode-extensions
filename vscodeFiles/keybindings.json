@@ -2,8 +2,36 @@
 [
     {
         "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
         "command": "undo",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
     },
     {
         "key": "ctrl+z",
@@ -63,5 +91,18 @@
         "key": "ctrl+a",
         "command": "editor.action.selectAll",
         "when": "textInputFocus"
-    }
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
 ]
