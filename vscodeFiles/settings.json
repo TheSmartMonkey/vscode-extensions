@@ -30,6 +30,9 @@
     "editor.minimap.maxColumn": 200,
     "editor.minimap.showSlider": "always",
     
+    // Terminal
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    
     // Other
     "files.insertFinalNewline": true,
     "explorer.autoReveal": false,
