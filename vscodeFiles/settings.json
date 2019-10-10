@@ -5,13 +5,32 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    
+    // Javascript
     "emmet.syntaxProfiles": {
         "javascript": "jsx" 
     },
     "emmet.includeLanguages": {
         "javascript": "html"
     },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    
+    // Workbench
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "vscode-great-icons",
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    
+    // Explorer
+    "explorer.openEditors.visible": 0,
+    
+    // Window
+    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+    
+    // Minimap
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 200,
+    "editor.minimap.showSlider": "always",
+    
+    // Other
+    "files.insertFinalNewline": true,
+    "explorer.autoReveal": false,
 }
