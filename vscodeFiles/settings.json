@@ -21,6 +21,7 @@
     
     // Explorer
     "explorer.openEditors.visible": 0,
+    "workbench.tree.indent": 15,
     
     // Window
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
