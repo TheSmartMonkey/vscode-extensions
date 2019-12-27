@@ -56,7 +56,7 @@ if __name__ == '__main__':
     parser.add_argument('-ui', '--un-install-all', default = 'uninstall', help = 'Uninstall all your extensions', action = 'store_true', dest = "uninstall")
     parser.add_argument('-k', '--set-keys', default = 'keybindings_folder_path', help = "Set your keys shortcuts to the keybindings.json in vscodeFiles", dest = "keybindings_folder_path")
     parser.add_argument('-s', '--set-settings', default = 'settings_folder_path', help = "Set your settings to the settings.json in vscodeFiles", dest = "settings_folder_path")
-    parser.add_argument('-us', '--user-snippets', default = 'user_snippets_folder_path', help = "Set your snippets by language", dest = "user_snippets_folder_path")
+    parser.add_argument('-us', '--user-snippets', default = 'user_snippets_folder_path', help = "Set your snippets", dest = "user_snippets_folder_path")
     arguments = parser.parse_args()
 
     # Install only extra extensions
@@ -117,7 +117,8 @@ if __name__ == '__main__':
             keybindings_file = "keybindings.json"
             copyfile("vscodeFiles/" + keybindings_file, arguments.keybindings_folder_path + keybindings_file)
             print("\nKeybindings setup COMPLETED")
-        except:
+        except Exception as e:
+            print(e)
             print("""\nvscode user folder path is uncorrect ! 
 Use a parameter after the -k option to your vscode user folder path\n
 default are :
@@ -131,7 +132,8 @@ Mac : $HOME/Library/Application Support/Code/User""")
             settings_file = "settings.json"
             copyfile("vscodeFiles/" + settings_file, arguments.settings_folder_path + settings_file)
             print("\nSettings setup COMPLETED")
-        except:
+        except Exception as e:
+            print(e)
             print("""\nvscode user folder path is uncorrect ! 
 Use a parameter after the -s option to your vscode user folder path\n
 default are :
@@ -139,18 +141,22 @@ Windows : %APPDATA%\\Code\\User\\
 Linux : $HOME/.config/Code/User/
 Mac : $HOME/Library/Application Support/Code/User/""")
 
-    # Setup your settings by copying the vscodeFiles/settings.json file
+    # Setup your snippets by copying all the json files in userSnippets folder
     if arguments.user_snippets_folder_path != "user_snippets_folder_path":
         try:
-            for user_snippets_file in os.listdir(arguments.user_snippets_folder_path):
+            if os.path.exists(arguments.user_snippets_folder_path) == False:
+                os.mkdir(arguments.user_snippets_folder_path)
+
+            for user_snippets_file in os.listdir("userSnippets"):
                 copyfile("userSnippets/" + user_snippets_file, arguments.user_snippets_folder_path + user_snippets_file)
                 print("copied: " + user_snippets_file)
 
             print("\nUser snippets setup COMPLETED")
-        except:
-            print("""\nvscode user folder path is uncorrect ! 
+        except Exception as e:
+            print(e)
+            print("""\nvscode user folder path is uncorrect !
 Use a parameter after the -us option to your vscode user folder path\n
 default are :
-Windows : %APPDATA%\\Code\\User\\
+Windows : %APPDATA%\\\\Code\\\\User\\\\
 Linux : $HOME/.config/Code/User/
 Mac : $HOME/Library/Application Support/Code/User/""")

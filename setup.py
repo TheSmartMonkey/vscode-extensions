@@ -9,6 +9,7 @@ import os
 # Setup my Visual Studio Code
 os.system("python vscode.py -k /home/developer/.config/Code/User/")
 os.system("python vscode.py -s /home/developer/.config/Code/User/")
+os.system("python vscode.py -us /home/developer/.config/Code/User/snippets/")
 print("\n")
 os.system("python vscode.py --install")
 
