@@ -15,13 +15,14 @@ Scripts to install my extensions, settings, keybindings for Visual Studio Code
 Get help : `python vscode.py -h`
 
 ```bash
-usage: vscode.py [-h] [-i] [-c] [-ri] [-ui] [-o] [-k KEYBINDINGS_FOLDER_PATH]
-                 [-s SETTINGS_FOLDER_PATH]
+usage: vscode.py [-h] [-i] [-c] [-ri] [-ui] [-k KEYBINDINGS_FOLDER_PATH]
+                 [-s SETTINGS_FOLDER_PATH] [-us USER_SNIPPETS_FOLDER_PATH]
 
 optional arguments:
   -h, --help            show this help message and exit
   -i, --install         Install only extra extensions
-  -c, --copy            Overright extensions in the extensionList.txt with yours
+  -c, --copy            Overright extensions in the extensionList.txt with
+                        yours
   -ri, --re-install     Reinstall all your extensions
   -ui, --un-install-all
                         Uninstall all your extensions
@@ -30,6 +31,8 @@ optional arguments:
                         vscodeFiles
   -s SETTINGS_FOLDER_PATH, --set-settings SETTINGS_FOLDER_PATH
                         Set your settings to the settings.json in vscodeFiles
+  -us USER_SNIPPETS_FOLDER_PATH, --user-snippets USER_SNIPPETS_FOLDER_PATH
+                        Set your snippets
 ```
 
 * Install only extra extensions : `python vscode.py --install`
@@ -43,6 +46,8 @@ optional arguments:
 * Set your keys shortcuts to the keybindings.json in vscodeFiles : `python vscode.py --set-keys "KEYBINDINGS_FOLDER_PATH"`
 
 * Set your settings to the settings.json in vscodeFiles : `python vscode.py --set-settings "SETTINGS_FOLDER_PATH"`
+
+* Set your user snippets in the snippets folder : `python vscode.py --user-snippets "USER_SNIPPETS_FOLDER_PATH"`
 
 Default vscode user folder path are :
 
