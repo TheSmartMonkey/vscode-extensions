@@ -105,4 +105,8 @@
         "key": "ctrl+e",
         "command": "workbench.files.action.showActiveFileInExplorer"
     },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.toggleZenMode"
+    },
 ]
