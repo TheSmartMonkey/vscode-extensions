@@ -1,6 +1,4 @@
 {
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    "files.autoSave": "afterDelay",
     "liveshare.featureSet": "insiders",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
@@ -22,6 +20,7 @@
     // Explorer
     "explorer.openEditors.visible": 0,
     "workbench.tree.indent": 15,
+    "explorer.autoReveal": false,
     
     // Window
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
@@ -32,9 +31,11 @@
     "editor.minimap.showSlider": "always",
     
     // Terminal
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     
-    // Other
+    // Files
     "files.insertFinalNewline": true,
-    "explorer.autoReveal": false,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true
 }
