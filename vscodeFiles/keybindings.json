@@ -93,13 +93,19 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpen"
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.toggleDevTools",
+        "when": "isDevelopment"
     },
     {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
+        "key": "ctrl+shift+i",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
         "key": "ctrl+e",
