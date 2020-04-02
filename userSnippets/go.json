@@ -13,7 +13,7 @@
 	// 	"description": "Log output to console"
 	// }
 
-	"Initialize go file": {
+		"Initialize go file": {
 		"prefix": "init",
 		"body": [
 			"package main",
@@ -25,10 +25,15 @@
 			"",
 			"func main() {",
 			"\t",
+			"}",
+			"",
+			"func ${functionName}() {",
+			"\t",
 			"}"
 		],
 		"description": "init go file"
 	},
+
 	"Append a slice": {
 		"prefix": "append",
 		"body": [
@@ -36,11 +41,12 @@
 		],
 		"description": "Append a slice"
 	},
+
 	"Creates a struct": {
 		"prefix": "struct",
 		"body": [
 			"type $1 struct {",
-			"\t${Name} ${type}",
+			"\t${Name} ${type} `json:\"${Name}\"`",
 			"}"
 		],
 		"description": "creates a struct"
