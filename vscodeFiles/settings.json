@@ -41,5 +41,5 @@
     
     // Files
     "files.insertFinalNewline": true,
-    "files.autoSave": "afterDelay"
+    //"files.autoSave": "afterDelay"
 }
