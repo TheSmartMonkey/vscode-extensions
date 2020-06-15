@@ -1,12 +1,17 @@
 {
     "liveshare.featureSet": "insiders",
     
-    // Formatter
+    // Formatter and indentation
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.tabSize": 2
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 2
+    },
+    "[go]": {
+        "editor.tabSize": 4
     },
     
     // Javascript
