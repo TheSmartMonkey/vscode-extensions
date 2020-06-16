@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-alefragnani.Bookmarks
 alexiv.vscode-angular2-files
 eamodio.gitlens
 emmanuelbeziat.vscode-great-icons
