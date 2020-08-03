@@ -17,3 +17,4 @@ oderwat.indent-rainbow
 steoates.autoimport
 vincaslt.highlight-matching-tag
 wayou.vscode-todo-highlight
+ms-python.python
