@@ -1,7 +1,7 @@
 aaron-bond.better-comments
 alexiv.vscode-angular2-files
 eamodio.gitlens
-emmanuelbeziat.vscode-great-icons
+PKief.material-icon-theme
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
