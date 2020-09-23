@@ -25,7 +25,8 @@
     
     // Workbench
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.color": "#42a5f5",
     
     // Explorer
     "explorer.openEditors.visible": 0,
