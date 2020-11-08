@@ -23,6 +23,9 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     
+    // Help menu
+    "python.showStartPage": false,
+    
     // Workbench
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "material-icon-theme",
