@@ -17,6 +17,7 @@
     "go.lintFlags": [
         "--exclude=\"\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\b\""
     ],
+    "go.formatTool": "goimports",
     
     // Javascript
     "emmet.syntaxProfiles": {
@@ -54,5 +55,15 @@
     
     // Files
     "files.insertFinalNewline": true,
-    //"files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay"
+    
+    // Popups
+    "extensions.ignoreRecommendations": true,
+    
+    // Bracket color
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
+    "bracket-pair-colorizer-2.colorMode": "Independent",
+    
+    // Autocomplete
+    "tabnine.experimentalAutoImports": true,
 }
