@@ -14,6 +14,6 @@ print("\n")
 os.system("python vscode.py --install")
 
 # Go back to main project
-os.system("code --no-xshm ~/WKS/src/gitlab.com/moonshotlabs/mylegal")
+os.system("code --no-xshm ~/WKS/src/gitlab.com/moonshotlabs")
 
 print("\nEnvironnement setup COMPLETED")
